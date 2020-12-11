@@ -4,6 +4,7 @@
     <string name="saved">Guardado</string>
     <string name="not_saved">No Guardado</string>
     <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
     <string name="author">Autor</string>
     <string name="book">Libro</string>
     <string name="title_activity_new_book">NewBookActivity</string>

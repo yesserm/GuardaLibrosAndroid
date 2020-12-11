@@ -12,7 +12,7 @@ class NewBookActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_book)
-        btAdd.setOnClickListener {
+        btSave.setOnClickListener {
             val resultIntent = Intent()
 
             if (TextUtils.isEmpty(etAuthorName.text) || TextUtils.isEmpty(etBookName.text)){
@@ -25,6 +25,9 @@ class NewBookActivity : AppCompatActivity() {
                 resultIntent.putExtra(NEW_BOOK, book)
                 setResult(Activity.RESULT_OK, resultIntent)
             }
+            finish()
+        }
+        btCancel.setOnClickListener {
             finish()
         }
     }

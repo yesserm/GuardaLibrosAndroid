@@ -1,9 +1,7 @@
 package com.yesser.booknotes
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface BookDao {
@@ -12,4 +10,10 @@ interface BookDao {
 
     @get:Query("SELECT * FROM books")
     val allBooks: LiveData<List<Book>>
+
+    @Update
+    fun update(book: Book)
+
+    @Delete
+    fun delete(book: Book)
 }

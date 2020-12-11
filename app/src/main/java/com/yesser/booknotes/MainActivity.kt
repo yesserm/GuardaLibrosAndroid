@@ -7,18 +7,19 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.yesser.booknotes.BookListAdapter.OnDeleteClickListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnDeleteClickListener {
     private lateinit var bookViewModel: BookViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bookListAdapter = BookListAdapter(this)
+        val bookListAdapter = BookListAdapter(this, this)
         recyclerview.adapter = bookListAdapter
         recyclerview.layoutManager = LinearLayoutManager(this)
 
@@ -50,7 +51,19 @@ class MainActivity : AppCompatActivity() {
                 R.string.saved,
                 Toast.LENGTH_LONG
             ).show()
-        } else {
+        } else if(requestCode == UPDATE_NOTE_ACTIVITY_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            val id = data!!.getStringExtra(EditBookActivity.ID)
+            val authorName = data!!.getStringExtra(EditBookActivity.UPDATED_AUTHOR)
+            val bookName = data!!.getStringExtra(EditBookActivity.UPDATED_BOOK)
+
+            val book = Book(id, authorName, bookName)
+
+            //codigo para actualizar
+            bookViewModel.update(book)
+
+            Toast.makeText(applicationContext, "Actualizado", Toast.LENGTH_LONG).show()
+
+        }else {
             Toast.makeText(
                 applicationContext,
                 R.string.not_saved,
@@ -61,5 +74,11 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val NEW_NOTE_ACTIVITY_REQUEST_CODE = 1
+        const val UPDATE_NOTE_ACTIVITY_REQUEST_CODE = 2
+    }
+
+    override fun onDeleteClickListener(myBook: Book) {
+        bookViewModel.delete(myBook)
+        Toast.makeText(applicationContext, "Borrado",Toast.LENGTH_LONG).show()
     }
 }
