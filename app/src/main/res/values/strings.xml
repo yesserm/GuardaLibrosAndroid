@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Mi Guarda Libros</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="saved">Guardado</string>
+    <string name="not_saved">No Guardado</string>
+    <string name="save">Guardar</string>
+    <string name="author">Autor</string>
+    <string name="book">Libro</string>
+    <string name="title_activity_new_book">NewBookActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_login">Iniciar Sesión</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Clave</string>
+    <string name="action_sign_in">Iniciar sesión o Registrarse</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Usuario no válido</string>
+    <string name="invalid_password">clave debe ser > 5 caracteres</string>
+    <string name="login_failed">"Inicio de sesión fallido"</string>
+
+
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="forgotPassword">Olvidaste tu contraseña?</string>
+    <string name="firstName">Nombre</string>
+    <string name="lastName">Apellido</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="createAct">Crear cuenta</string>
+</resources>

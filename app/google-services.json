@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "974561463807",
+    "project_id": "mi-guarda-libros",
+    "storage_bucket": "mi-guarda-libros.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974561463807:android:dc150525bf666ee62f6bca",
+        "android_client_info": {
+          "package_name": "com.yesser.booknotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974561463807-egkrma0dnpgnitk2nebjq833k6cdo93r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwYP3tjY8pVPPgGFdctqncNqUOP42E1ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974561463807-egkrma0dnpgnitk2nebjq833k6cdo93r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
